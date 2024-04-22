@@ -63,6 +63,7 @@ public class compositiveManager : MonoBehaviour
                     isGameOver = true;
                     Debug.Log("GAME IS OVER");
                     DisplayResults();
+                    Time.timeScale = 0f;
                 }
                 break;
             
