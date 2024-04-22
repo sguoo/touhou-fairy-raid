@@ -2,7 +2,7 @@
 
 touhou secondary creation
 
-###추가할 것 
+### 추가할 것 
 
 무기
 
@@ -26,7 +26,7 @@ touhou secondary creation
 
 노래
 
-###수정사항
+### 수정사항
 
 2024-04-22
 
