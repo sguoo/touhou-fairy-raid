@@ -304,9 +304,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1751255407}
-  - {fileID: 643390874}
   - {fileID: 163777175}
   - {fileID: 1373647782}
+  - {fileID: 643390874}
   m_Father: {fileID: 326688842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6789,6 +6789,10 @@ MonoBehaviour:
     spriteType: 0
     health: 30
     speed: 2.25
+  - spawnTime: 0.5
+    spriteType: 1
+    health: 50
+    speed: 2.25
 --- !u!1 &393773526
 GameObject:
   m_ObjectHideFlags: 0
@@ -11696,9 +11700,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 242570076}
-  - {fileID: 191045734}
   - {fileID: 1303719865}
   - {fileID: 242741679}
+  - {fileID: 191045734}
   m_Father: {fileID: 326688842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -36008,9 +36012,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2103934718}
-  - {fileID: 1205867951}
   - {fileID: 1060196960}
   - {fileID: 1742121489}
+  - {fileID: 1205867951}
   m_Father: {fileID: 326688842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -43929,9 +43933,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 626011585}
-  - {fileID: 541917801}
   - {fileID: 256800221}
   - {fileID: 1337253516}
+  - {fileID: 541917801}
   m_Father: {fileID: 326688842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
