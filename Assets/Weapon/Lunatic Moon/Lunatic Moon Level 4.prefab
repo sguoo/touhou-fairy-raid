@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c4bd28b2492ce4b862572eb5c79417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 8126a24fd1f893b4abae38dc4e59c845, type: 2}
+  data: {fileID: 11400000, guid: e36c626bd8341e14d93ddac64ce0bbf0, type: 2}
   level: 4
   weapon: {fileID: 8234181015865486656}
   icon: {fileID: -1337526214, guid: d9629cef8bddf1649851e0c28107e5f7, type: 3}
