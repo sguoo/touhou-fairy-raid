@@ -166,6 +166,8 @@ public class InventoryManager : MonoBehaviour
                 availableWeaponUpgrades.Remove(chosenWeaponUpgrade);
                 if (chosenWeaponUpgrade != null)
                 {
+                    EnableUpgradeUI(upgradeOption);
+                    
                     bool newWeapon = false;
                     for (int i = 0; i < weaponsSlots.Count; i++)
                     {
@@ -176,6 +178,7 @@ public class InventoryManager : MonoBehaviour
                             {
                                 if (!chosenWeaponUpgrade.itemData.NextLevelPrefab)
                                 {
+                                    DisableUpgradeUI(upgradeOption);
                                     break;
                                 }
                                 upgradeOption.upgradeButton.onClick.AddListener(() => LevelUpWeapon(i, chosenWeaponUpgrade.weaponUpgradeIndex));
@@ -210,6 +213,8 @@ public class InventoryManager : MonoBehaviour
                 
                 if (chosenPassiveItemUpgrade != null)
                 {
+                    EnableUpgradeUI(upgradeOption);
+                    
                     bool newPassiveItem = false;
                     for (int i = 0; i < passiveSlots.Count; i++)
                     {
@@ -222,6 +227,7 @@ public class InventoryManager : MonoBehaviour
                             {
                                 if (!chosenPassiveItemUpgrade.PassiveItemData.NextLevelPrefab)
                                 {
+                                    DisableUpgradeUI(upgradeOption);
                                     break;
                                 }
                                 upgradeOption.upgradeButton.onClick.AddListener(()=>LevelUpPassiveItem(i, chosenPassiveItemUpgrade.passiveItemUpgradeIndex));
@@ -259,11 +265,22 @@ public class InventoryManager : MonoBehaviour
         foreach (var upgradeOptions in upgradeUiOptions)
         {
             upgradeOptions.upgradeButton.onClick.RemoveAllListeners();
+            DisableUpgradeUI(upgradeOptions);
         }
     }
     public void RemoveAndApplyUpgrades()
     {
         RemoveUpgradeOptions();
         ApplyUpgradeOptions();
+    }
+
+    void DisableUpgradeUI(UpgradeUI ui)
+    {
+        ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(false);
+    }
+
+    void EnableUpgradeUI(UpgradeUI ui)
+    {
+        ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(true);
     }
 }
