@@ -35,3 +35,5 @@ touhou secondary creation
 - 스킬 레벨이 MAX일때 레벨업 스킬 선택창에 보이는 버그 수정
 
 - 루나틱 문 collider 크기 너프
+
+- 루나틱 문레벨이 MAX일때 스킬 선택창에 뜨는 버그 수정
