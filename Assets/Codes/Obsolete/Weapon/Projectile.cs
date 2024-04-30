@@ -17,7 +17,7 @@ public class ProjectTIle : WeaponEffect
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Item.Stats stats = weapon.GetStats();
+        Weapon.Stats stats = weapon.GetStats();
         if (rb.bodyType == RigidbodyType2D.Dynamic)
         {
             rb.angularVelocity = rotationSpeed.z;

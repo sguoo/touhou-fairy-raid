@@ -1,13 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class compositiveManager : MonoBehaviour
 {
     public static compositiveManager instanc;
-    
     public enum GameState
     {
         Gameplay,
@@ -21,10 +23,21 @@ public class compositiveManager : MonoBehaviour
 
     [Header("UI")] 
     public GameObject pauseScreen;
-
     public GameObject resultsScreen;
-    
     public GameObject LevelUpScreen;
+    [Header("Current Stat Displays")]
+    public TMP_Text currentHealthDisplay;
+    public TMP_Text currentRecoveryDisplay;
+    public TMP_Text currentMoveSpeedDisplay;
+    public TMP_Text currentMightDisplay;
+    public TMP_Text currentProjectileSpeedDisplay;
+    public TMP_Text currentMagnetDisplay;
+
+    [Header("Result Screen Displays")] 
+    public Image chosenCharacterImage;
+    public Text chosenCharacterName;
+    public Text levelReachedDisplay;
+    
     public bool choosingUpgrade;
 
     public bool isGameOver = false;
@@ -134,8 +147,17 @@ public class compositiveManager : MonoBehaviour
     {
         resultsScreen.SetActive(true);
     }
-    
-    
+
+    public void AssignChosenCharacterUI(CharacterData chosenCharacterData)
+    {
+        chosenCharacterImage.sprite = chosenCharacterData.Icon;
+        chosenCharacterName.text = chosenCharacterData.name;
+    }
+
+    public void AssignLevelReachedUI(int levelReachedData)
+    {
+        levelReachedDisplay.text = levelReachedData.ToString();
+    }
     
 
     public void StartLevelUp()

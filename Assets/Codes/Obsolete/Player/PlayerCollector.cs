@@ -17,7 +17,7 @@ public class PlayerCollector : MonoBehaviour
 
     private void Update()
     {
-        SetRadius(player.currentMagnet);
+        SetRadius(player.CurrentMagnet);
     }
 
     public void SetRadius(float r)
