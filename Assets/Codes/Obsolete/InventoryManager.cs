@@ -1,3 +1,4 @@
+
 /*
 using System;
 using System.Collections;
@@ -15,7 +16,7 @@ public class InventoryManager : MonoBehaviour
     public int[] weaponLevels = new int[6];
     public List<Image> weaponUISlots = new List<Image>(6);
     public List<Image> passiveItemUISlots = new List<Image>(6);
-    public List<PassiveItem> passiveSlots = new List<PassiveItem>(6);
+    public List<Passive> passiveSlots = new List<Passive>(6);
     public int[] PassiveItemLevels = new int[6];
     private Bullet bullet;
 
@@ -56,12 +57,12 @@ public class InventoryManager : MonoBehaviour
         player = GetComponent<PlayerStats>();
     }
 
-    public void Addweapon(int slotIndex, Item item)
+    public void Addweapon(int slotIndex, Weapon item)
     {
         weaponsSlots[slotIndex] = item;
         weaponLevels[slotIndex] = item.data.GetLevelData();
         weaponUISlots[slotIndex].enabled = true;
-        weaponUISlots[slotIndex].sprite = item.data.itemIcon;
+        weaponUISlots[slotIndex].sprite = item.data.icon;
         
         if (compositiveManager.instanc != null && compositiveManager.instanc.choosingUpgrade)
         {
@@ -69,7 +70,7 @@ public class InventoryManager : MonoBehaviour
         } 
     }
 
-    public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
+    public void AddPassiveItem(int slotIndex, Passive passiveItem)
     {
         passiveSlots[slotIndex] = passiveItem;
         PassiveItemLevels[slotIndex] = passiveItem.passiveWeaponData.Level;

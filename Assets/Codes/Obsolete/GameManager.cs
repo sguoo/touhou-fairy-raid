@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 
 public class GameManager : MonoBehaviour
 {
-    public CharacterScriptObject characterData;
+    public CharacterData characterData;
     public static GameManager instance;
     public GameObject power;
     public float gameTime;
@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        recovery = characterData.Recovery;
-        might = characterData.Might;
-        magnet = characterData.Magnet;
-        maxhealth = characterData.MaxHealth;
+        recovery = characterData.stats.recovery;
+        might = characterData.stats.might;
+        magnet = characterData.stats.magnet;
+        maxhealth = characterData.stats.maxHealth;
         health = maxhealth;
         
     }

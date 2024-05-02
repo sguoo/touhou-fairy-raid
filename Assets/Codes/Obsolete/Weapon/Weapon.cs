@@ -14,7 +14,8 @@ public abstract class Weapon : Item
     {
         public string name, description;
         [Header("Visuals")] 
-        public ProjectTIle projectilePrefab;
+        public ProjectTile projectilePrefab;
+        //public Aura auraPrefab;
         public ParticleSystem hitEffect;
         public Rect spawnVariance;
 
@@ -52,14 +53,14 @@ public abstract class Weapon : Item
     protected Stats currentStats;
     public WeaponData data;
     protected float currentCooldown;
-    protected Player movement;
+    protected PlayerMovements movement;
 
     public virtual void Initialise(WeaponData data)
     {
         base.Initialise(data);
         this.data = data;
         currentStats = data.baseStats;
-        movement = GetComponentInParent<Player>();
+        movement = GetComponentInParent<PlayerMovements>();
         currentCooldown = currentStats.cooldown;
         
     }
@@ -105,13 +106,8 @@ public abstract class Weapon : Item
 
     public virtual bool CanAttack()
     {
-        if (CanAttack())
-        {
-            currentCooldown += currentStats.cooldown;
-            return true;
-        }
+        return currentCooldown <= 0;
 
-        return false;
     }
 
     protected virtual bool Attack(int attackCount = 1)

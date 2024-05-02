@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d168918f2f85b4db6ed14f9571efe7, type: 3}
+  m_Name: Kirisame Marisa
+  m_EditorClassIdentifier: 
+  icon: {fileID: -52765983, guid: de4f59ff74407b54c87d59d73fa8eb7e, type: 3}
+  name: Kirisame Marisa
+  startingWeapon: {fileID: 11400000, guid: f2318387d5aa1a54da70055bd79572d9, type: 2}
+  stats:
+    maxHealth: 100
+    recovery: 0
+    moveSpeed: 5
+    might: 1
+    speed: 1
+    magnet: 30

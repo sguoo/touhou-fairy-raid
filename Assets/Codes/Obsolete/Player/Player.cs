@@ -30,18 +30,11 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        inputVec.x = Input.GetAxisRaw("Horizontal");
-        inputVec.y = Input.GetAxisRaw("Vertical"); 
-    }
+    
 
-    void FixedUpdate()
-    {
-        //anim.SetInteger("Id", characterData.);
-        Vector2 nextVec = inputVec.normalized * (speed * Time.fixedDeltaTime);
-        rigid.MovePosition(rigid.position + nextVec);
-    }
+
+    
+
 
     void LateUpdate()
     {

@@ -203,7 +203,7 @@ public class PlayerStats : MonoBehaviour
     [Header("UI")]
     public Image healthBar;
     public Image expBar;
-    public TMP_Text levelText;
+    public Text levelText;
     
     private void Awake()
     {
@@ -250,7 +250,7 @@ public class PlayerStats : MonoBehaviour
     {
         experience += amount;
         LevelUpCheker();
-        UpdateExpBar();
+        UpdateExpBar(); 
     }   
 
     void LevelUpCheker()
@@ -285,7 +285,7 @@ public class PlayerStats : MonoBehaviour
         levelText.text = "LV " + level.ToString();
     }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(float dmg)   
     {
         if (!isInvincible)
         {
