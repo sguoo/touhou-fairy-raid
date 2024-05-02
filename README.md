@@ -37,3 +37,7 @@ touhou secondary creation
 - 루나틱 문 collider 크기 너프
 
 - 루나틱 문레벨이 MAX일때 스킬 선택창에 뜨는 버그 수정
+
+2024-04-30
+
+- 무기 사용하기 쉽게 바꿈(인게임 미적용)
